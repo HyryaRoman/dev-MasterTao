@@ -1,6 +1,15 @@
-@import "sass/bootstrap/bootstrap";
+/* https://getbootstrap.com/docs/5.3/customize/sass/ */
+
+@import "sass/bootstrap/functions";
+
+@import "sass/color_theme";
 
 @import "sass/fonts";
 @import "sass/common";
+
 @import "sass/footer";
 @import "sass/header";
+@import "sass/button";
+
+@import "sass/bootstrap/bootstrap";
+
