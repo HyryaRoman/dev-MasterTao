@@ -2,7 +2,35 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
 
-  /*background: $theme-bg;*/
-  /*color: $theme-text;*/
+ol:not([class]) li::marker {
+  color: $primary;
+}
+
+ul:not([class]) {
+  list-style-type: none;
+  
+
+  li {
+    position: relative;
+
+    &::before {
+      $ul-decor-size: 8px !default;
+      $ul-decor-offset: 20px !default;
+    
+      content: "";
+      
+      position: absolute;
+      left: -$ul-decor-offset;
+      top: calc(50% - $ul-decor-size / 2);
+      
+      width: $ul-decor-size;
+      height: $ul-decor-size;
+      
+      background: $primary;
+
+      transform: rotate(45deg);
+    }
+  }
 }
