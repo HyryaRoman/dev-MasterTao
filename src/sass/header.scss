@@ -1,16 +1,134 @@
 $navbar-light-color: $body-color;
 $navbar-light-hover-color: $secondary;
 
-@import "sass/bootstrap/variables";
-@import "sass/bootstrap/mixins";
+$navbar-padding-y: 0;
+$navbar-brand-padding-y: 0;
+$navbar-brand-margin-end: 0;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-font-size: 25px;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+
+$navbar-nav-link-padding-x: 22.4px;
+
+$nav-link-font-size: 24px;
+$nav-link-font-weight: 400;
+$nav-link-padding-y: 5.2px;
 
 .nav-header {
-  $gutter-x: 30px;
+  $gutter-x: 0;
 
   @include make-container($gutter-x);
   
-  margin-top: 25px;
-  margin-bottom: 39px;
+  margin-top: 17px;
+  margin-bottom: 15px;
   
   max-width: 1140px + $gutter-x;
+}
+
+.nav-header-drop-content {
+  margin-top: 12px;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  background: $body-secondary-bg;
+}
+
+.nav-header-item-list {
+  margin-bottom: 30px !important;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+
+  img {
+    display: block;
+    width: 133px;
+    height: 36.4px;
+    padding-left: 0;
+  }
+}
+
+.navbar-toggler {
+  margin-right: 16px;
+  border: none !important;
+}
+
+.nav-link {
+  line-height: 53.28px;
+  // https://getbootstrap.com/docs/5.3/components/navbar/#variables
+  // https://getbootstrap.com/docs/5.3/getting-started/rfs/
+  font-size: 24px !important;
+}
+
+.navbar-btn {
+  width: 295px;
+  height: 68px;
+  margin: 0 auto;
+}
+
+.navbar-btn > .btn {
+  width: 100%;
+  height: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+
+
+@include media-breakpoint-up(xl) {
+  .nav-header {
+    margin-top: 25px;
+    margin-bottom: 39px;
+  }
+
+  .nav-header-drop-content {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: inherit;
+  }
+
+  .nav-header-item-list {
+    margin-bottom: 0 !important;
+  }
+
+  .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0;
+
+    img {
+      width: 172px;
+      height: 48.35px;
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: 16px;
+  }
+
+  .nav-link {
+    line-height: 23.36px;
+    // https://getbootstrap.com/docs/5.3/components/navbar/#variables
+    // https://getbootstrap.com/docs/5.3/getting-started/rfs/
+    font-size: 16px !important;
+  }
+
+  .navbar-btn {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .navbar-btn > .btn {
+    width: auto;
+    height: auto;
+    padding-top: $btn-padding-y;
+    padding-bottom: $btn-padding-y;
+    font-size: 15px;
+    line-height: 21.9px;
+  }
 }
