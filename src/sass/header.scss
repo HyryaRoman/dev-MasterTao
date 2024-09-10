@@ -3,11 +3,14 @@ $navbar-light-hover-color: $secondary;
 
 $navbar-padding-y: 0;
 $navbar-brand-padding-y: 0;
+$navbar-brand-margin-end: 0;
 $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
 $navbar-toggler-font-size: 25px;
 $navbar-toggler-border-radius: 0;
 $navbar-toggler-focus-width: 0;
+
+$navbar-nav-link-padding-x: 22.4px;
 
 $nav-link-font-size: 24px;
 $nav-link-font-weight: 400;
@@ -18,8 +21,8 @@ $nav-link-padding-y: 5.2px;
 
   @include make-container($gutter-x);
   
-  padding-top: 17px;
-  margin-bottom: 39px;
+  margin-top: 17px;
+  margin-bottom: 15px;
   
   max-width: 1140px + $gutter-x;
 }
@@ -72,13 +75,59 @@ $nav-link-padding-y: 5.2px;
   padding-bottom: 22px;
 }
 
+
+
 @include media-breakpoint-up(xl) {
   .nav-header {
     margin-top: 25px;
+    margin-bottom: 39px;
   }
 
-  .navbar-brand img {
-    width: 172px;
-    height: 48.35px;
+  .nav-header-drop-content {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: inherit;
+  }
+
+  .nav-header-item-list {
+    margin-bottom: 0 !important;
+  }
+
+  .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0;
+
+    img {
+      width: 172px;
+      height: 48.35px;
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: 16px;
+  }
+
+  .nav-link {
+    line-height: 23.36px;
+    // https://getbootstrap.com/docs/5.3/components/navbar/#variables
+    // https://getbootstrap.com/docs/5.3/getting-started/rfs/
+    font-size: 16px !important;
+  }
+
+  .navbar-btn {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .navbar-btn > .btn {
+    width: auto;
+    height: auto;
+    padding-top: $btn-padding-y;
+    padding-bottom: $btn-padding-y;
+    font-size: 15px;
+    line-height: 21.9px;
   }
 }
