@@ -1,8 +1,9 @@
 /* https://getbootstrap.com/docs/5.3/customize/sass/ */
 
 @import "sass/bootstrap/functions";
-
 @import "sass/bootstrap_style";
+@import "sass/bootstrap/variables";
+@import "sass/bootstrap/mixins";
 
 @import "sass/fonts";
 @import "sass/common";
