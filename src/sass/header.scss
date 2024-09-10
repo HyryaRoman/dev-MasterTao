@@ -4,13 +4,44 @@ $navbar-light-hover-color: $secondary;
 @import "sass/bootstrap/variables";
 @import "sass/bootstrap/mixins";
 
+$navbar-padding-y: 0px;
+$navbar-brand-padding-y: 0px;
+$navbar-toggler-padding-y: 0px;
+$navbar-toggler-padding-x: 0px;
+$navbar-toggler-font-size: 24px;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+
 .nav-header {
   $gutter-x: 30px;
 
   @include make-container($gutter-x);
   
-  margin-top: 25px;
+  margin-top: 17px;
   margin-bottom: 39px;
   
   max-width: 1140px + $gutter-x;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  img {
+    display: block;
+    width: 130px;
+    height: 35.42px;
+    padding-left: 3px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .nav-header {
+    margin-top: 25px;
+  }
+
+  .navbar-brand img {
+    width: 172px;
+    height: 48.35px;
+  }
 }
