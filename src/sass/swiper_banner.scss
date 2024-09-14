@@ -1,32 +1,95 @@
-.swiper {
-  border-radius: 20px;
-
+.swiper.swiper-banner {
   --swiper-navigation-sides-offset: 148px;
   --swiper-navigation-size: 46px;
-}
+  --swiper-navigation-color: var(--bs-secondary);
 
-.swiper-slide
-{
-  display: flex;
-  align-items: center;
-  min-height: 700px;
-}
-
-.banner {
-  &-title {
-    margin-bottom: 8px;
-    max-width: 463px;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 70.56px;
+  .swiper-slide
+  {
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+    background-position: center; 
   }
 
-  &-description {
-    margin-bottom: 37px;
-    max-width: 320px;
-    min-height: 54.2px;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 27.1px;
+  .swiper-button {
+    display: none;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: auto;
+
+    &-title {
+      margin-bottom: 10px;
+      max-width: 335px;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40.32px;
+      text-align: center;
+    }
+
+    &-description {
+      margin-bottom: 18px;
+      max-width: 335px;
+      min-height: 43.36px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 21.68px;
+      text-align: center;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    border: 2px solid #ffffff;
+    opacity: 90;
+    background: none;
+
+    &.swiper-pagination-bullet-active {
+      background: #ffffff;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    --swiper-navigation-sides-offset: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    border-radius: 20px;
+
+    .swiper-slide {
+      min-height: 700px;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+    
+      &-title {
+        margin-bottom: 8px;
+        max-width: 463px;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 70.56px;
+        text-align: left;
+      }
+
+      &-description {
+        margin-bottom: 37px;
+        max-width: 320px;
+        min-height: 54.2px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 27.1px;
+        text-align: left;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .swiper-button {
+      display: initial;
+    }
   }
 }
