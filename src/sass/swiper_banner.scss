@@ -3,12 +3,11 @@
   --swiper-navigation-size: 46px;
   --swiper-navigation-color: var(--bs-secondary);
 
-  .swiper-slide
-  {
+  .swiper-slide {
     display: flex;
     align-items: center;
     min-height: 650px;
-    background-position: center; 
+    background-position: center;
   }
 
   .swiper-button {
@@ -65,7 +64,7 @@
     .banner {
       display: block;
       width: 100%;
-    
+
       &-title {
         margin-bottom: 8px;
         max-width: 463px;
