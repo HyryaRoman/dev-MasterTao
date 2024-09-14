@@ -1,7 +1,9 @@
 .swiper.swiper-banner {
   --swiper-navigation-sides-offset: 148px;
   --swiper-navigation-size: 46px;
-  --swiper-navigation-color: var(--bs-secondary);
+  --swiper-navigation-color: #ffffff;
+  --swiper-pagination-bottom: 43px;
+  --swiper-pagination-bullet-horizontal-gap: 13px;
 
   .swiper-slide
   {
@@ -13,6 +15,11 @@
 
   .swiper-button {
     display: none;
+    color: #ffffff;
+
+    &:hover {
+      color: var(--bs-secondary)
+    }
   }
 
   .banner {
@@ -28,6 +35,7 @@
       font-weight: 700;
       line-height: 40.32px;
       text-align: center;
+      text-transform: uppercase
     }
 
     &-description {
@@ -38,6 +46,11 @@
       font-weight: 300;
       line-height: 21.68px;
       text-align: center;
+    }
+
+    &-btn {
+      width: 295px;
+      height: 68px;
     }
   }
 

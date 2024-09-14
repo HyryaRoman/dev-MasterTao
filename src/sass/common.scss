@@ -48,10 +48,13 @@ ul:not([class]) {
 // ========== Buttons ==================================================================================================
 // =====================================================================================================================
 
-.btn {
+.btn.btn {
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 23.36px;
+  white-space: nowrap;
 }
 
 // Dirty trick to increase specifity
@@ -64,6 +67,8 @@ ul:not([class]) {
     width: 27px;
     height: 27px;
     margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
