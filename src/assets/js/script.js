@@ -30,7 +30,7 @@ const dog = {
 const bird = {
   name: "Ori",
   age: 2,
-  color: "Blue",
+  color: "blue",
   parents: {
     mother: 'Polly',
     father: 'Hector'
@@ -40,7 +40,7 @@ const bird = {
 const fish = {
   name: "Goby",
   age: 1,
-  color: "blue",
+  color: "yellow",
   parents: {
     mother: 'Sasha',
     father: 'Max'
