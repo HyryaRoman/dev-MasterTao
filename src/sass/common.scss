@@ -57,6 +57,11 @@ ul:not([class]) {
   white-space: nowrap;
 }
 
+.btn.btn-block {
+  // display: block;
+  width: 100%;
+}
+
 // Dirty trick to increase specifity
 .btn-with-icon.btn-with-icon {
   position: relative;
@@ -91,6 +96,27 @@ ul:not([class]) {
     background: $body-secondary-bg;
     // background-clip: content-box;
   }
+
+  margin-bottom: 55px;
+
+  &-title {
+    // padding-bottom: 25px;
+    
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.88px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 85px;
+      height: 2px;
+      margin: 23px auto 0;
+      background: $secondary;
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
@@ -105,7 +131,7 @@ ul:not([class]) {
   }
 }
 
-$content-container-padding-x: 20px;
+$content-container-padding-x: 40px;
 
 .content-container {
   @include make-container($content-container-padding-x);

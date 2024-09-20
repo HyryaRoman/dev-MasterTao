@@ -1,0 +1,46 @@
+<section class="page-section">
+  <div class="content-container">
+    <h2 class="page-section-title">Получить рассчет стоимости доставки вашего груза</h2>
+    <form class="calc-form">
+      <div class="input-block">
+        <label for="category" class="form-label">Категория товара:</label>
+        <input id="category" class="form-control" type="text" placeholder="Категория товара"/>
+      </div>
+      <div class="input-block">
+        <label for="mass" class="form-label">Вес груза (кг):</label>
+        <input id="mass" class="form-control" type="text" placeholder="Введите вес"/>
+      </div>
+      <div class="input-block">
+        <label for="cost" class="form-label">Стоимость груза:</label>
+        <input id="cost" class="form-control" type="text" placeholder="Введите стоимость"/>
+      </div>
+      <div class="input-block">
+        <label for="volume" class="form-label">Объем груза (м3):</label>
+        <input id="volume" class="form-control" type="text" placeholder="Введите объем"/>
+      </div>
+      <div class="input-block checkbox-block">
+        <div class="checkbox-input">
+          <input class="form-check-input" id="markup-checkbox" type="checkbox">
+          <label class="form-check-label" for="markup-checkbox">Страховка</label>
+        </div>
+        <div class="checkbox-input">
+          <input class="form-check-input" id="markup-checkbox" type="checkbox">
+          <label class="form-check-label" for="markup-checkbox">Таможенное оформление</label>
+        </div>
+      </div>
+      <div class="input-block">
+        <label for="tn_ved_code" class="form-label">Код ТН ВЭД:</label>
+        <input id="tn_ved_code" class="form-control" type="text" placeholder="Введите код"/>
+      </div>
+      <div class="file-input">
+        <div class="file-list"></div>
+        <div class="block">Загрузить фото товара</div>
+        <input id="item-photo" type="file" />
+      </div>
+      <button class="btn btn-primary btn-block btn-with-icon" type="submit">
+        Следующий шаг
+        <img class="btn__icon" src="assets/img/button-arrow.svg" /></button>
+      </button>
+    </form>
+  </div>
+</section>
