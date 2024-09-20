@@ -2,9 +2,9 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
 
-  autoplay: {
-    delay: 6000,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  // },
 
   pagination: {
     el: '.swiper-pagination',
