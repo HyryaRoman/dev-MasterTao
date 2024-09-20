@@ -51,18 +51,10 @@ ul:not([class]) {
 .btn.btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   font-size: 16px;
   font-weight: 600;
   line-height: 23.36px;
   white-space: nowrap;
-}
-
-@include media-breakpoint-down(xl) {
-  .btn.btn-block {
-    // display: block;
-    width: 100%;
-  }
 }
 
 // Dirty trick to increase specifity
@@ -73,7 +65,7 @@ ul:not([class]) {
   .btn__icon {
     width: 27px;
     height: 27px;
-    margin: auto -9px auto 57px;
+    margin: auto -9px auto auto;
   }
 }
 
@@ -95,58 +87,31 @@ ul:not([class]) {
 // =====================================================================================================================
 
 .page-section {
-  margin-bottom: 55px;
-  
   &:nth-child(2n + 1) {
     background: $body-secondary-bg;
     // background-clip: content-box;
   }
-
-  &-title {
-    // padding-bottom: 25px;
-    
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29.88px;
-    text-align: center;
-    text-transform: uppercase;
-
-    &:after {
-      content: '';
-      display: block;
-      width: 85px;
-      height: 2px;
-      margin: 23px auto 0;
-      background: $secondary;
-    }
-  }
-}
-
-$content-container-padding-x: 40px;
-
-.content-container {
-  @include make-container($content-container-padding-x);
 }
 
 @include media-breakpoint-up(xl) {
   .page-section {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 100px;
     max-width: 1820px;
 
     &:nth-child(2n + 1) {
       border-radius: 20px;
     }
-
-    &-title {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 44.82px;
-      text-align: left;
-    }
   }
+}
 
+$content-container-padding-x: 20px;
+
+.content-container {
+  @include make-container($content-container-padding-x);
+}
+
+@include media-breakpoint-up(xl) {
   .content-container {
     max-width: 1140px + $content-container-padding-x * 2;
   }
