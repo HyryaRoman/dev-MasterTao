@@ -1,5 +1,5 @@
 .swiper.swiper-banner {
-  --swiper-navigation-sides-offset: 148px;
+  --swiper-navigation-sides-offset: 156px;
   --swiper-navigation-size: 46px;
   --swiper-navigation-color: #ffffff;
   --swiper-pagination-bottom: 42px;
@@ -96,11 +96,17 @@
 
     .swiper-slide {
       min-height: 700px;
+      padding-top: 164px;
+      
+      &::before {
+        display: none;
+      }
     }
 
     .banner {
       display: block;
       width: 100%;
+      max-width: 1180px;
 
       &-title {
         margin-bottom: 8px;
@@ -113,6 +119,7 @@
 
       &-description {
         margin-bottom: 37px;
+        padding: 0;
         max-width: 320px;
         min-height: 54.2px;
         font-size: 20px;
