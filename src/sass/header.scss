@@ -81,7 +81,7 @@ $nav-link-padding-y: 5.2px;
 @include media-breakpoint-up(xl) {
   .nav-header {
     margin-top: 25px;
-    margin-bottom: 37px;
+    margin-bottom: 39px;
   }
 
   .nav-header-drop-content {
@@ -126,8 +126,8 @@ $nav-link-padding-y: 5.2px;
   .navbar-btn>.btn {
     width: auto;
     height: auto;
-    padding-top: $btn-padding-y;
-    padding-bottom: $btn-padding-y;
+    padding-top: 14px;
+    padding-bottom: 12px;
     font-size: 15px;
     line-height: 21.9px;
   }
