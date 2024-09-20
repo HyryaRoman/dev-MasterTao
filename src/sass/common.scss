@@ -95,8 +95,8 @@ ul:not([class]) {
 // =====================================================================================================================
 
 .page-section {
-  margin-bottom: 55px;
-  
+  margin-bottom: 0;
+
   &:nth-child(2n + 1) {
     background: $body-secondary-bg;
     // background-clip: content-box;
@@ -104,21 +104,91 @@ ul:not([class]) {
 
   &-title {
     // padding-bottom: 25px;
-    
+
     font-size: 24px;
     font-weight: 700;
     line-height: 29.88px;
     text-align: center;
     text-transform: uppercase;
 
-    &:after {
-      content: '';
-      display: block;
-      width: 85px;
-      height: 2px;
-      margin: 23px auto 0;
+    &:not(:first-of-type) {
+      margin-top: 34px;
+    }
+
+    &:not(.no-decor) {
+      margin-bottom: 25px;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 85px;
+        height: 2px;
+        margin: 23px auto 0;
+        background: $secondary;
+      }
+    }
+
+    &.primary:after {
+      background: $primary;
+    }
+
+    &.secondary:after {
       background: $secondary;
     }
+
+
+    &.inline {
+      text-align: center;
+
+      &::after {
+        display: block;
+        margin: 23px auto 0;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.92px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:not(.no-decor) {
+      margin-bottom: 25px;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 85px;
+        height: 2px;
+        margin: 23px auto 0;
+        background: $secondary;
+      }
+    }
+
+    &.primary:after {
+      background: $primary;
+    }
+
+    &.secondary:after {
+      background: $secondary;
+    }
+
+
+    &.inline {
+      text-align: center;
+
+      &::after {
+        display: block;
+        margin: 23px auto 0;
+      }
+    }
+  }
+
+  .content-container {
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 }
 
@@ -143,7 +213,64 @@ $content-container-padding-x: 40px;
       font-size: 36px;
       font-weight: 700;
       line-height: 44.82px;
-      text-align: left;
+      text-align: center;
+
+      &:not(:first-of-type) {
+        margin-top: 50px;
+      }
+
+      &:not(.no-decor) {
+        margin-bottom: 50px;
+      }
+
+      &.align-left {
+        text-align: left;
+
+        &::after {
+          margin: 23px 0 0;
+        }
+      }
+
+      &.inline {
+        &::after {
+          display: inline-block;
+          margin: 12px 20px;
+        }
+      }
+
+      &.max-width {
+        max-width: 650px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29.88px;
+      text-align: center;
+
+      &:not(.no-decor) {
+        margin-bottom: 50px;
+      }
+
+      &.align-left {
+        text-align: left;
+
+        &::after {
+          margin: 23px 0 0;
+        }
+      }
+
+      &.inline {
+        &::after {
+          display: inline-block;
+          margin: 12px 20px;
+        }
+      }
+
+      &.max-width {
+        max-width: 650px;
+      }
     }
   }
 
