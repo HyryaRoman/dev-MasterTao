@@ -20,23 +20,23 @@ ol:not([class]) li::marker {
 
 ul:not([class]) {
   list-style-type: none;
-  
+
   li {
     position: relative;
 
     &::before {
       $ul-decor-size: 8px !default;
       $ul-decor-offset: 20px !default;
-    
+
       content: "";
-      
+
       position: absolute;
       left: -$ul-decor-offset;
       top: calc(50% - $ul-decor-size / 2);
-      
+
       width: $ul-decor-size;
       height: $ul-decor-size;
-      
+
       background: $primary;
 
       transform: rotate(45deg);
@@ -63,7 +63,6 @@ ul:not([class]) {
   text-align: start;
 
   .btn__icon {
-    // float: right;
     width: 27px;
     height: 27px;
     margin: auto -9px auto auto;
@@ -87,9 +86,7 @@ ul:not([class]) {
 // ========== Page sections ============================================================================================
 // =====================================================================================================================
 
-.page-section {
-  
-}
+.page-section {}
 
 .page-section:nth-child(2n + 1) {
   background: $body-secondary-bg;
@@ -116,4 +113,3 @@ $content-container-padding-x: 20px;
     max-width: 1140px + $content-container-padding-x * 2;
   }
 }
-
