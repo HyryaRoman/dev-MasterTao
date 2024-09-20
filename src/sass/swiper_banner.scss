@@ -2,15 +2,27 @@
   --swiper-navigation-sides-offset: 148px;
   --swiper-navigation-size: 46px;
   --swiper-navigation-color: #ffffff;
-  --swiper-pagination-bottom: 43px;
+  --swiper-pagination-bottom: 42px;
   --swiper-pagination-bullet-horizontal-gap: 13px;
 
   .swiper-slide
   {
     display: flex;
-    align-items: center;
+    // align-items: center;
     min-height: 650px;
+    padding-top: 189px;
     background-position: center; 
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #04051199;
+    }
   }
 
   .swiper-button {
@@ -26,11 +38,14 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: auto;
+    // width: auto;
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 0 20px;
 
     &-title {
       margin-bottom: 10px;
-      max-width: 335px;
+      // max-width: 335px;
       font-size: 32px;
       font-weight: 700;
       line-height: 40.32px;
@@ -40,7 +55,8 @@
 
     &-description {
       margin-bottom: 18px;
-      max-width: 335px;
+      padding: 0 20px;
+      // max-width: 335px;
       min-height: 43.36px;
       font-size: 16px;
       font-weight: 300;
@@ -52,6 +68,10 @@
       width: 100%;
       height: 68px;
     }
+  }
+
+  .swiper-pagination {
+    font-size: 0;
   }
 
   .swiper-pagination-bullet {

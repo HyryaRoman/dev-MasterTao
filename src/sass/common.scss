@@ -66,9 +66,7 @@ ul:not([class]) {
     // float: right;
     width: 27px;
     height: 27px;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto -9px auto auto;
   }
 }
 
