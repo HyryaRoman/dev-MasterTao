@@ -10,6 +10,10 @@
   }
 }
 
+.calc-form-content-container {
+  padding-top: 55px !important;
+}
+
 .calc-form {
   padding: 52px 30px 34px;
   margin-top: 54px;
@@ -40,11 +44,15 @@
 }
 
 @include media-breakpoint-up(xl) {
+  .calc-form-content-container {
+    padding-top: 100px !important;
+  }
+
   .calc-form {
     position: relative;
     margin-top: 56px;
     margin-left: 20px;
-    margin-bottom: 114px;
+    margin-bottom: 14px;
     padding: 50px;
     padding-bottom: 60px;
     max-width: 626px;
