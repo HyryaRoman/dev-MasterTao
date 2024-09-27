@@ -16,6 +16,29 @@ const swiperBanner = new Swiper('.swiper-banner', {
   },
 });
 
+const swiperBenefits = new Swiper('.swiper-benefits', {
+  direction: 'horizontal',
+  loop: true,
+
+  // autoplay: {
+  //   delay: 6000,
+  // },
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  breakpoints: {
+    1200: {
+      'slidesPerView': 8,
+      // 'grid': {
+      //   'columns': 8,
+      //   'rows': 2,
+      // },
+    }
+  },
+});
+
 
 const dog = {
   name: "Lucky",

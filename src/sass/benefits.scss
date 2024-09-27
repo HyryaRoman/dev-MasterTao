@@ -1,0 +1,70 @@
+.swiper-benefits {
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-bullet-horizontal-gap: 13px;
+
+  .swiper-slide {
+    display: flex;
+    flex-flow: column nowrap;
+    // justify-content: center;
+    align-items: center;
+    height: 201px;
+    margin: 20px 0 34px;
+  }
+
+  .swiper-slide-title {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .swiper-slide-description {
+    max-width: 160px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.41px;
+    text-align: center;
+
+    &.slim {
+      max-width: 140px;
+    }
+
+    &.wide {
+      max-width: 280px;
+    }
+  }
+
+  .swiper-pagination {
+    font-size: 0;
+  }
+
+  .swiper-pagination-bullet {
+    border: 2px solid #ffffff;
+    opacity: 0.9;
+    background: none;
+
+    &.swiper-pagination-bullet-active {
+      background: #ffffff;
+    }
+  }
+
+  
+  @include media-breakpoint-up(xl) {
+    margin-bottom: -8px;
+    margin-top: -5px;
+  
+    .swiper-wrapper {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      grid-column-gap: 0px;
+      grid-row-gap: 26px;
+    }
+
+    .swiper-slide {
+      width: 263px !important;
+      margin: 0;
+    }
+  }
+}
