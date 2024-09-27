@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiperBanner = new Swiper('.swiper-banner', {
   direction: 'horizontal',
   loop: true,
 
