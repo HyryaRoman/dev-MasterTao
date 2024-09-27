@@ -112,15 +112,6 @@ $content-container-padding-x: 40px;
     text-align: center;
     text-transform: uppercase;
 
-    &:after {
-      content: '';
-      display: block;
-      width: 85px;
-      height: 2px;
-      margin: 23px auto 0;
-      background: $secondary;
-    }
-
     &:not(.no-decor) {
       margin-bottom: 25px;
       
@@ -132,16 +123,15 @@ $content-container-padding-x: 40px;
         margin: 23px auto 0;
         background: $secondary;
       }
-    }
 
-    &.primary:after {
-      background: $primary;
-    }
+      &.primary:after {
+        background: $primary;
+      }
 
-    &.secondary:after {
-      background: $secondary;
+      &.secondary:after {
+        background: $secondary;
+      }
     }
-
 
     &.inline {
       text-align: center;
