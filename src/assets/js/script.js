@@ -27,6 +27,16 @@ const swiperBenefits = new Swiper('.swiper-benefits', {
   pagination: {
     el: '.swiper-pagination',
   },
+
+  breakpoints: {
+    1200: {
+      'slidesPerView': 8,
+      // 'grid': {
+      //   'columns': 8,
+      //   'rows': 2,
+      // },
+    }
+  },
 });
 
 
