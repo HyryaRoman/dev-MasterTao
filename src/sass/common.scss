@@ -191,13 +191,16 @@ $content-container-padding-x: 40px;
       }
     }
   }
-
   .content-container {
-    @include make-container($content-container-padding-x);
-  
     padding-top: 55px;
     padding-bottom: 60px;
   }
+}
+
+.content-container {
+  @include make-container($content-container-padding-x);
+
+  max-width: 1180px + $content-container-padding-x;
 }
 
 @include media-breakpoint-up(xl) {
