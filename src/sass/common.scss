@@ -94,6 +94,8 @@ ul:not([class]) {
 // ========== Page sections ============================================================================================
 // =====================================================================================================================
 
+$content-container-padding-x: 40px;
+
 .page-section {
   margin-bottom: 0;
 
@@ -191,15 +193,11 @@ ul:not([class]) {
   }
 
   .content-container {
+    @include make-container($content-container-padding-x);
+  
     padding-top: 90px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
   }
-}
-
-$content-container-padding-x: 40px;
-
-.content-container {
-  @include make-container($content-container-padding-x);
 }
 
 @include media-breakpoint-up(xl) {
@@ -276,9 +274,10 @@ $content-container-padding-x: 40px;
         max-width: 650px;
       }
     }
-  }
 
-  .content-container {
-    max-width: 1140px + $content-container-padding-x * 2;
+    .content-container {
+      max-width: 1140px + $content-container-padding-x * 2;
+      padding-bottom: 100px;
+    }
   }
 }
