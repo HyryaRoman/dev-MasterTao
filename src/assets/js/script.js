@@ -39,6 +39,29 @@ const swiperBenefits = new Swiper('.swiper-benefits', {
   },
 });
 
+const swiperCard = new Swiper('.swiper-card', {
+  direction: 'horizontal',
+  loop: true,
+
+  // autoplay: {
+  //   delay: 6000,
+  // },
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    1200: {
+      'slidesPerView': 3,
+    }
+  },
+})
 
 const dog = {
   name: "Lucky",

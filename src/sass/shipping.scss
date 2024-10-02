@@ -1,0 +1,135 @@
+.shipping-card {
+  width: 335px;
+  border-radius: 20px;
+  background: $body-secondary-bg;
+  box-shadow: 0px 4px 13px 0px #1E23421C, 5px 15px 40px 0px #0B186152;
+
+  &-image {
+    display: block;
+    width: 100%;
+    height: 229px;
+    margin-bottom: 27px;
+    border-radius: 20px 20px 0 0 ;
+  }
+
+  &-title {
+    margin-bottom: 11px;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.39px;
+    text-align: center;
+  }
+
+  &-conditions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 12px;
+
+    &>* {
+      .text {
+        margin-left: 10px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.92px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-price {
+    margin-bottom: 17px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.39px;
+    text-align: center;
+
+    .big {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 56.03px;
+      text-align: center;
+    }
+  }
+
+  &-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 23px 27px;
+
+    .shipping-btn {
+      padding: 14px 10px;
+
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 21.9px;
+      text-align: center;
+    }
+  }
+}
+
+.swiper-card {
+  --swiper-navigation-sides-offset: 156px;
+  --swiper-navigation-size: 46px;
+  --swiper-navigation-color: #ffffff;
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-bullet-horizontal-gap: 13px;
+
+  padding-bottom: 40px;
+
+  .swiper-wrapper {
+     // display: flex;
+     gap: 30px;
+
+     padding: 0 20px;
+  }
+
+  .swiper-slide {
+    width: fit-content !important;
+  }
+
+  .swiper-button {
+    display: none;
+    color: #ffffff;
+
+    &:hover {
+      color: var(--bs-secondary)
+    }
+  }
+
+  .swiper-pagination {
+    font-size: 0;
+  }
+
+  .swiper-pagination-bullet {
+    border: 2px solid #ffffff;
+    opacity: 90;
+    background: none;
+
+    &.swiper-pagination-bullet-active {
+      background: #ffffff;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .shipping-card {
+    width: 360px;
+  }
+
+  .swiper-card {
+    padding-bottom: 0;
+
+    .swiper-button {
+      display: block;
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
