@@ -1,0 +1,150 @@
+.shipping-card {
+  width: 335px;
+  border-radius: 20px;
+  background: $body-secondary-bg;
+  box-shadow: 5px 15px 40px 0px #02051d52;
+
+  &-image {
+    display: block;
+    width: 100%;
+    height: 229px;
+    margin-bottom: 27px;
+    border-radius: 20px 20px 0 0 ;
+  }
+
+  &-title {
+    margin-bottom: 11px;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.39px;
+    text-align: center;
+  }
+
+  &-conditions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 12px;
+
+    &>* {
+      .text {
+        margin-left: 10px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.92px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-price {
+    margin-bottom: 17px;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.39px;
+    text-align: center;
+
+    .big {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 56.03px;
+      text-align: center;
+    }
+  }
+
+  &-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 23px 27px;
+
+    .shipping-btn {
+      padding: 14px 10px;
+
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 21.9px;
+      text-align: center;
+    }
+  }
+}
+
+.card-swiper {
+  --swiper-pagination-bottom: 60px;
+  --swiper-pagination-bullet-horizontal-gap: 13px;
+
+  margin-bottom: -60px;
+  padding-bottom: 40px;
+
+  .swiper-wrapper {
+     padding-bottom: 60px;
+  }
+
+  .swiper-slide {
+    width: fit-content !important;
+
+    &:not(.swiper-slide-visible) {
+      opacity: 0;
+    }
+  }
+
+  .swiper-pagination {
+    font-size: 0;
+  }
+
+  .swiper-pagination-bullet {
+    border: 2px solid #ffffff;
+    opacity: 90;
+    background: none;
+
+    &.swiper-pagination-bullet-active {
+      background: #ffffff;
+    }
+  }
+}
+
+.swiper-button-container {
+  position: relative;
+  bottom: 240px;
+  --swiper-navigation-sides-offset: -60px;
+  --swiper-navigation-size: 46px;
+  --swiper-navigation-color: #ffffff;
+
+  .swiper-button {
+    display: none;
+    color: #ffffff;
+
+    &:hover {
+      color: var(--bs-secondary)
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .shipping-card {
+    width: 360px;
+  }
+
+  .card-swiper {
+    padding-bottom: 0;
+
+    .swiper-wrapper {
+      gap: 30px;
+      padding: 0 20px 60px;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+  }
+
+  .swiper-button-container {
+    .swiper-button {
+      display: block;
+    }
+  }
+}

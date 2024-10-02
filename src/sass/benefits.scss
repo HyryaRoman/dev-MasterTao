@@ -47,11 +47,11 @@
     }
   }
 
-  
+
   @include media-breakpoint-up(xl) {
     margin-bottom: -8px;
     margin-top: -5px;
-  
+
     .swiper-wrapper {
       display: grid;
       grid-template-rows: 1fr 1fr;

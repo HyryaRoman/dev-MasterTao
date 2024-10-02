@@ -39,6 +39,34 @@ const swiperBenefits = new Swiper('.swiper-benefits', {
   },
 });
 
+document.querySelectorAll(".card-swiper-container").forEach(function (s) {
+  console.log(s.querySelector('.swiper-button-next'));
+  const swiperCard = new Swiper(s.querySelector('.card-swiper'), {
+    direction: 'horizontal',
+    loop: true,
+
+    // autoplay: {
+    //   delay: 6000,
+    // },
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: s.querySelector('.swiper-button-next'),
+      prevEl: s.querySelector('.swiper-button-prev'),
+    },
+
+    breakpoints: {
+      1200: {
+        'slidesPerView': 3,
+      }
+    },
+
+    watchSlidesProgress: true,
+  });
+});
 
 const dog = {
   name: "Lucky",
