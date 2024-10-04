@@ -1,8 +1,12 @@
 .shipping-card {
-  width: 335px;
+  min-width: 335px;
+  max-width: 360px;
+  margin: 0 auto;
   border-radius: 20px;
   background: $body-secondary-bg;
-  box-shadow: 5px 15px 40px 0px #02051d52;
+  // Remove x offset (looks weird in swiper)
+  // box-shadow: 5px 15px 40px 0px #02051d52;
+  box-shadow: 0px 15px 40px 0px #02051d52;
 
   &-image {
     display: block;
@@ -73,78 +77,8 @@
   }
 }
 
-.card-swiper {
-  --swiper-pagination-bottom: 60px;
-  --swiper-pagination-bullet-horizontal-gap: 13px;
-
-  margin-bottom: -60px;
-  padding-bottom: 40px;
-
-  .swiper-wrapper {
-     padding-bottom: 60px;
-  }
-
-  .swiper-slide {
-    width: fit-content !important;
-
-    &:not(.swiper-slide-visible) {
-      opacity: 0;
-    }
-  }
-
-  .swiper-pagination {
-    font-size: 0;
-  }
-
-  .swiper-pagination-bullet {
-    border: 2px solid #ffffff;
-    opacity: 90;
-    background: none;
-
-    &.swiper-pagination-bullet-active {
-      background: #ffffff;
-    }
-  }
-}
-
-.swiper-button-container {
-  position: relative;
-  bottom: 240px;
-  --swiper-navigation-sides-offset: -60px;
-  --swiper-navigation-size: 46px;
-  --swiper-navigation-color: #ffffff;
-
-  .swiper-button {
-    display: none;
-    color: #ffffff;
-
-    &:hover {
-      color: var(--bs-secondary)
-    }
-  }
-}
-
 @include media-breakpoint-up(xl) {
   .shipping-card {
-    width: 360px;
-  }
-
-  .card-swiper {
-    padding-bottom: 0;
-
-    .swiper-wrapper {
-      gap: 30px;
-      padding: 0 20px 60px;
-    }
-
-    .swiper-pagination {
-      display: none;
-    }
-  }
-
-  .swiper-button-container {
-    .swiper-button {
-      display: block;
-    }
+    // width: 360px;
   }
 }

@@ -1,0 +1,63 @@
+.service-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  min-width: 335px;
+  max-width: 360px;
+  height: 482px;
+  margin: 0 auto;
+  padding: 0 34px 0 30px;
+  border-radius: 20px;
+
+  background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%), center center var(--bg-image);
+
+  // Remove x offset (looks weird in swiper)
+  // box-shadow: 5px 15px 40px 0px #02051d52;
+  box-shadow: 0px 15px 40px 0px #02051d52;
+
+  &-title {
+    margin-bottom: 13px;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.39px;
+    text-align: left;
+  }
+
+  &-description {
+    margin-bottom: 7px;
+
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+  }
+
+  &-button {
+    display: inline-block !important;
+    width: 153px !important;
+    margin-bottom: 33px !important;
+    padding: 14px 24.16px !important;
+
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 22px !important;
+    text-align: center !important;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .service-card {
+    padding: 0 23px 0 30px;
+
+    &-description {
+      margin-bottom: 14px;
+
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18.68px;
+      text-align: left;
+    }
+  }
+}
