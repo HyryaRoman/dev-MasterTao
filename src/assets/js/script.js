@@ -60,10 +60,13 @@ document.querySelectorAll(".card-swiper-container").forEach(function (s) {
 
     breakpoints: {
       1200: {
-        'slidesPerView': 3,
+        slidesPerView: 3,
       }
     },
 
+    spaceBetween: 30,
+    // slidesOffsetBefore: 20,
+    // slidesOffsetAfter: 20,
     watchSlidesProgress: true,
   });
 });
