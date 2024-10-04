@@ -1,5 +1,7 @@
 .shipping-card {
-  width: 335px;
+  min-width: 335px;
+  max-width: 360px;
+  margin: 0 auto;
   border-radius: 20px;
   background: $body-secondary-bg;
   // Remove x offset (looks weird in swiper)
@@ -77,6 +79,6 @@
 
 @include media-breakpoint-up(xl) {
   .shipping-card {
-    width: 360px;
+    // width: 360px;
   }
 }

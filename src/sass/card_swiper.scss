@@ -10,7 +10,7 @@
   }
 
   .swiper-slide {
-    width: fit-content !important;
+    // width: fit-content !important;
 
     &:not(.swiper-slide-visible) * {
       box-shadow: none; // Disable shadow for invisible slides
@@ -37,11 +37,11 @@
   bottom: 240px;
   --swiper-navigation-sides-offset: -60px;
   --swiper-navigation-size: 46px;
-  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-color: #6C6F7F;
 
   .swiper-button {
     display: none;
-    color: #ffffff;
+    color: #6C6F7F;
 
     &:hover {
       color: var(--bs-secondary)
@@ -50,10 +50,6 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .shipping-card {
-    width: 360px;
-  }
-
   .card-swiper {
     padding: 0 20px;
 

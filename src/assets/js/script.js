@@ -58,7 +58,12 @@ document.querySelectorAll(".card-swiper-container").forEach(function (s) {
       prevEl: s.querySelector('.swiper-button-prev'),
     },
 
+    slidesPerView: 1,
+
     breakpoints: {
+      740: {
+        slidesPerView: 2,
+      },
       1200: {
         slidesPerView: 3,
       }
