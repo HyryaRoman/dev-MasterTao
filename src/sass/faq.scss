@@ -1,6 +1,13 @@
 .about {
   margin-bottom: 48px;
 
+  b,
+  strong {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.92px;
+  }
+
   p {
     margin-bottom: 21px;
     font-size: 16px;
@@ -9,7 +16,7 @@
     text-align: justify;
   }
 
-  .illustration {
+  &-picture {
     display: block;
     height: 290px;
     margin: 40px auto 0;
@@ -164,6 +171,41 @@
       .btn__icon {
         margin: auto -9px auto 80px;
       }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .about {
+    display: flex;
+    margin-bottom: 50px;
+
+    &-text {
+      padding: 55px 0px 0 20px;
+
+      &-title {
+        margin-bottom: 39px !important;
+      }
+
+      b,
+      strong {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30.6px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30.6px;
+        text-align: left;
+      }
+    }
+
+    &-picture {
+      margin: 0 20px 0 35px;
+      width: 550px;
+      height: 581px;
     }
   }
 }
