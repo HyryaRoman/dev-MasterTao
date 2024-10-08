@@ -1,0 +1,281 @@
+.about {
+  margin-bottom: 48px;
+
+  b,
+  strong {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.92px;
+  }
+
+  p {
+    margin-bottom: 21px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23.92px;
+    text-align: justify;
+  }
+
+  &-picture {
+    display: block;
+    height: 290px;
+    margin: 40px auto 0;
+  }
+}
+
+.faq {
+  padding-top: 4px;
+}
+
+.faq-accordion {
+  $transition: .35s ease;
+  display: block;
+  width: 100%;
+  margin-bottom: 31px;
+
+  &-item {
+    margin-bottom: 16px;
+
+    border: 1px solid #3A444E;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: $body-bg;
+    color: $body-color;
+
+    transition: border-color $transition, background-color $transition, color $transition;
+
+    &:not(:has(.collapsed)) {
+      border-color: $body-color;
+      background: $body-color;
+      color: $body-bg;
+    }
+  }
+
+  &-header {
+    margin-bottom: 0px;
+  }
+
+  &-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    // justify-content: center;
+    // align-items: center;
+    min-height: 60px;
+    padding: 11px 76px 11px 22px;
+
+    border: none;
+    background: none;
+    color: inherit;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+
+    transition: padding $transition;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 19px;
+      top: 17px;
+      width: 27px;
+      height: 27px;
+      mask-image: url('assets/img/accordion-arrow-right.svg');
+      background-color: #FFFFFF;
+      transition: transform $transition, background-color $transition;
+    }
+
+    &:not(.collapsed) {
+      // background: $body-color;
+      // color: $body-bg;
+
+      padding: 16px 80px 4px 22px;
+
+      &::after {
+        background-color: #E58D35;
+        transform: rotate(-90deg);
+      }
+    }
+
+  }
+
+  &-body {
+    margin: 0;
+    padding: 0 22px 9px;
+
+    // background: $body-bg;
+    // color: $body-color;
+    // background: $body-color;
+    // color: $body-bg;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20.23px;
+    text-align: left;
+
+    // transition: background-color $transition, color $transition;
+  }
+}
+
+.faq-form {
+  padding: 38px 15px;
+  border-radius: 20px;
+  background: $body-secondary-bg;
+  box-shadow: 5px 15px 40px 0px #02051d52;
+
+  &-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.24px;
+    text-align: center;
+  }
+
+  &-description {
+    margin-bottom: 22px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.42px;
+    text-align: center;
+  }
+
+  &-fields {
+    margin-bottom: 26px;
+    padding: 0 5px;
+
+    .form-control {
+      margin-bottom: 14px;
+      padding: 19px 20px 18px;
+      border-radius: 10px;
+
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: left;
+    }
+
+    .form-textarea {
+      padding: 19px 20px 13px;
+    }
+  }
+
+  &-submit {
+    margin: 0 auto;
+    width: 295px;
+
+    .btn {
+      padding-left: 33px;
+
+      .btn__icon {
+        margin: auto -9px auto 80px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .about {
+    display: flex;
+    margin-bottom: 53px;
+
+    &-text {
+      box-sizing: content-box;
+      min-width: 555px;
+      width: 555px;
+      padding: 55px 0px 0 20px;
+
+      &-title {
+        margin-bottom: 39px !important;
+      }
+
+      b,
+      strong {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 31px;
+        text-align: left;
+      }
+    }
+
+    &-picture {
+      margin: auto 20px auto 35px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .faq-accordion {
+    &-item {
+      margin-bottom: 15.7px;
+    }
+
+    &-button {
+      padding: 20px 76px 20px 33px;
+
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22.41px;
+      text-align: left;
+
+      &:not(.collapsed) {
+        padding: 20px 76px 20px 33px;
+      }
+    }
+
+    &-body {
+      margin-top: -7px;
+      padding: 0 100px 21px 34px;
+
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 24.57px;
+      text-align: left;
+    }
+  }
+
+  .faq {
+    margin-top: -8px;
+    margin-bottom: -46px;
+    display: flex;
+    gap: 34px;
+    padding: 0 20px 0 20px;
+  }
+
+  .faq-form {
+    padding: 38px 40px 38px 40px;
+    width: 390px;
+    height: fit-content;
+
+    &-title {
+      text-align: left;
+    }
+
+    &-description {
+      text-align: left;
+    }
+
+    &-fields {
+      padding: 0;
+    }
+
+    &-submit {
+      width: 310px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
