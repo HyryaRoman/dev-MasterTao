@@ -16,9 +16,13 @@
   }
 }
 
+.faq {
+  padding-top: 4px;
+}
+
 .faq-accordion {
   $transition: .35s ease;
-  margin-bottom: 28px;
+  margin-bottom: 31px;
 
   &-item {
     margin-bottom: 16px;
