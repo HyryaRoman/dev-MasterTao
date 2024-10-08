@@ -106,3 +106,60 @@
     // transition: background-color $transition, color $transition;
   }
 }
+
+.faq-form {
+  padding: 38px 15px;
+  border-radius: 20px;
+  background: $body-secondary-bg;
+  box-shadow: 5px 15px 40px 0px #02051d52;
+
+  &-title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.24px;
+    text-align: center;
+  }
+
+  &-description {
+    margin-bottom: 22px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21.42px;
+    text-align: center;
+  }
+
+  &-fields {
+    margin-bottom: 26px;
+    padding: 0 5px;
+
+    .form-control {
+      margin-bottom: 14px;
+      padding: 19px 20px 18px;
+      border-radius: 10px;
+
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: left;
+    }
+
+    .form-textarea {
+      padding: 19px 20px 13px;
+    }
+  }
+
+  &-submit {
+    margin: 0 auto;
+    width: 295px;
+
+    .btn {
+      padding-left: 33px;
+
+      .btn__icon {
+        margin: auto -9px auto 80px;
+      }
+    }
+  }
+}

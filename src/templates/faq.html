@@ -55,11 +55,11 @@
 
         <div class="faq-accordion-item">
           <h3 class="faq-accordion-header">
-            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-controls="faq-4">
+            <button class="faq-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-controls="faq-4">
               Можно ли через вас оплатить товар поставщику?
             </button>
           </h2>
-          <div id="faq-4" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+          <div id="faq-4" class="faq-accordion-collapse collapse show" data-bs-parent="#accordion-faq">
             <p class="faq-accordion-body">
               Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет валютного счёта, то можете оплатить товар в гривнах на наш счет.
             </p>
@@ -92,6 +92,22 @@
           </div>
         </div>
       </div>
+      <form class="faq-form">
+        <h3 class="faq-form-title">Остались вопросы?</h3>
+        <p class="faq-form-description">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
+        <div class="faq-form-fields">
+            <input id="name" class="form-control" type="text" placeholder="Имя *" required />
+            <input id="phone" class="form-control" type="phone" placeholder="Телефон *" required />
+            <input id="email" class="form-control" type="text" placeholder="E-mail"/>
+            <textarea id="question" class="form-control form-textarea" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <div class="faq-form-submit">
+          <button class="btn btn-primary btn-block btn-with-icon" type="submit">
+            Отправить запрос
+            <img class="btn__icon" src="assets/img/button-arrow.svg" /></button>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
