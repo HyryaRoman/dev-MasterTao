@@ -1,0 +1,108 @@
+.about {
+  margin-bottom: 48px;
+
+  p {
+    margin-bottom: 21px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23.92px;
+    text-align: justify;
+  }
+
+  .illustration {
+    display: block;
+    height: 290px;
+    margin: 40px auto 0;
+  }
+}
+
+.faq-accordion {
+  $transition: .35s ease;
+  margin-bottom: 28px;
+
+  &-item {
+    margin-bottom: 16px;
+
+    border: 1px solid #3A444E;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: $body-bg;
+    color: $body-color;
+
+    transition: border-color $transition, background-color $transition, color $transition;
+
+    &:not(:has(.collapsed)) {
+      border-color: $body-color;
+      background: $body-color;
+      color: $body-bg;
+    }
+  }
+
+  &-header {
+    margin-bottom: 0px;
+  }
+
+  &-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    padding: 11px 76px 11px 22px;
+
+    border: none;
+    background: none;
+    color: inherit;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+
+    transition: padding $transition;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 19px;
+      top: 17px;
+      width: 27px;
+      height: 27px;
+      mask-image: url('assets/img/accordion-arrow-right.svg');
+      background-color: #FFFFFF;
+      transition: transform $transition, background-color $transition;
+    }
+
+    &:not(.collapsed) {
+      // background: $body-color;
+      // color: $body-bg;
+
+      padding: 16px 80px 4px 22px;
+
+      &::after {
+        background-color: #E58D35;
+        transform: rotate(-90deg);
+      }
+    }
+
+  }
+
+  &-body {
+    margin: 0;
+    padding: 0 22px 9px;
+
+    // background: $body-bg;
+    // color: $body-color;
+    // background: $body-color;
+    // color: $body-bg;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20.23px;
+    text-align: left;
+
+    // transition: background-color $transition, color $transition;
+  }
+}
