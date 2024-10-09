@@ -27,10 +27,8 @@
   padding-top: 4px;
 }
 
-$transition-collapse:         height 10.35s ease-in-out;
-
 .faq-accordion {
-  $transition: 10.35s ease-in-out;
+  $transition: .35s ease-in-out;
   display: block;
   width: 100%;
   margin-bottom: 31px;
