@@ -27,15 +27,19 @@
   padding-top: 4px;
 }
 
+$transition-collapse:         height 10.35s ease-in-out;
+
 .faq-accordion {
-  $transition: .35s ease;
+  $transition: 10.35s ease-in-out;
   display: block;
   width: 100%;
   margin-bottom: 31px;
 
-  &-item {
+  &-item:not(:last-child) {
     margin-bottom: 16px;
+  }
 
+  &-item {
     border: 1px solid #3A444E;
     border-radius: 10px;
 
@@ -93,7 +97,7 @@
       // background: $body-color;
       // color: $body-bg;
 
-      padding: 16px 80px 4px 22px;
+      padding: 16px 80px 6px 22px;
 
       &::after {
         background-color: #E58D35;
@@ -217,7 +221,9 @@
   }
 
   .faq-accordion {
-    &-item {
+    margin-bottom: 0;
+
+    &-item:not(:last-child) {
       margin-bottom: 15.7px;
     }
 
@@ -236,7 +242,7 @@
 
     &-body {
       margin-top: -7px;
-      padding: 0 100px 21px 34px;
+      padding: 0 100px 22px 34px;
 
       font-size: 17px;
       font-weight: 300;
@@ -247,7 +253,7 @@
 
   .faq {
     margin-top: -8px;
-    margin-bottom: -46px;
+    margin-bottom: 0;
     display: flex;
     gap: 34px;
     padding: 0 20px 0 20px;
