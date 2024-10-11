@@ -1,0 +1,85 @@
+.instructions {
+  &-picture {
+    display: block;
+    width: 100%;
+    margin: 43px 0 36px;
+    aspect-ratio: calc(335/220);
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 15px 40px 0px #02051d52;
+  }
+
+  &-list {
+    padding: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+
+    list-style: none;
+
+    p {
+      padding: 0;
+      margin-bottom: 21px;
+
+      // &::before {
+      //   content: '•';
+      //   display: inline-block;
+      //   margin-right: 11px;
+      //   // color: red;
+      // }
+    }
+  }
+
+  &-btn {
+    display: block;
+    width: 100%;
+
+    .btn__icon {
+      margin: auto -9px auto 57px !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .instructions {
+    padding: 35px 20px;
+
+    &-picture {
+      max-width: 555px;
+      aspect-ratio: calc(555/406);
+      margin: 0;
+
+      &.float-xl-end {
+        margin-left: 57px;
+      }
+
+      &.float-xl-start {
+        margin-right: 45px;
+      }
+    }
+
+    &-list {
+      margin-bottom: 48px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: left;
+
+      p {
+        margin-bottom: 25px;
+        padding-right: 20px;
+      }
+    }
+
+    &-picture:not(:first-child) ~ &-list {
+      padding-top: 25px;
+    }
+
+    &-btn {
+      width: auto;
+      margin-top: -6px;
+    }
+  }
+}
