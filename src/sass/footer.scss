@@ -3,6 +3,7 @@
 
   &-row {
     display: flex;
+    justify-content: center;
     margin-top: 55px !important;
     padding: 39px 0;
     border-top: 2px solid var(--bs-primary);
@@ -55,8 +56,59 @@
   }
 }
 
-@include media-breakpoint-up(xl) {
+.site-map {
+  display: none;
+  flex: 3;
+  gap: 30px;
+
+  &-title {
+    margin-bottom: 12px;
+    margin-top: -2px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29.2px;
+    text-align: left;
+  }
+
+  &-list > * {
+    margin-bottom: 6px;
+  }
+
+  .map-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: $body-secondary-color;
+  }
+}
+
+@include media-breakpoint-up(lg) {
   .footer {
-    
+    &-row {
+      justify-content: start;
+      margin: 55px 20px 0 !important;
+    }
+
+    &-logo {
+      margin: 0 0 29px;
+    }
+
+    &-address {
+      align-items: start;
+    }
+
+    &-socials {
+      margin: 0;
+    }
+
+    .contact-info {
+      margin-right: 106px;
+    }
+  }
+
+  .site-map {
+    display: flex;
   }
 }
