@@ -73,7 +73,7 @@
       }
     }
 
-    &-picture:not(:first-child)~&-list {
+    picture:not(:first-child) ~ &-list {
       padding-top: 25px;
     }
 
